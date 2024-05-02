@@ -60,6 +60,3 @@ A aplicação estará disponível em http://localhost:3000 por padrão.
 
 Sinta-se à vontade para contribuir com este projeto. Abra uma issue para discutir as alterações propostas ou envie um pull request.
 
-## Licença
-
-Este projeto é privado e não está disponível para uso público.
