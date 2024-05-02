@@ -1,6 +1,14 @@
+import { useState } from 'react';
 import Task from '../interface/Task';
+import TaskDeatailsEdit from './TaskDeatailsEdit';
 
 const DayCard = ({ day, tasks }: { day: number; tasks: Task[] }) => {
+    const [selectedTask, setSelectedTask] = useState<Task | null>(null);
+
+    const handleTaskClick = (task: Task) => {
+        setSelectedTask(task);
+    };
+
     return (
         <div className="m-3 flex flex-col items-center justify-center rounded-lg bg-slate-100 shadow-lg">
             <div className="flex justify-start align-top">
@@ -11,12 +19,19 @@ const DayCard = ({ day, tasks }: { day: number; tasks: Task[] }) => {
                 {tasks.map((task) => (
                     <div
                         key={task.id}
-                        className="mb-2 rounded-lg border border-gray-200 p-2"
+                        className="mb-2 cursor-pointer rounded-lg border border-gray-200 p-2 hover:bg-secondary hover:text-white"
+                        onClick={() => handleTaskClick(task)} 
                     >
                         <p className="text-sm font-medium">{task.title}</p>
                     </div>
                 ))}
             </div>
+            {selectedTask && (
+                <TaskDeatailsEdit
+                    task={selectedTask}
+                    onClose={() => setSelectedTask(null)}
+                />
+            )}
         </div>
     );
 };

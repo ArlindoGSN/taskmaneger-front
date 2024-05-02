@@ -55,6 +55,9 @@ const Header = ({ parseDate }: { parseDate: (date: dayjs.Dayjs) => void }) => {
                             <li className="align-baseline">
                                 <Link to="/month">Month</Link>
                             </li>
+                            <li className="align-baseline">
+                                <Link to="/tasklist">Task List</Link>
+                            </li>
                         </ul>
                     </nav>
                     <div>

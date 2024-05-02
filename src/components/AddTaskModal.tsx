@@ -30,6 +30,7 @@ const AddTaskModal = React.memo(
                     <h1 className="mb-4 text-lg font-semibold">
                         Cadastrar Tarefa
                     </h1>
+
                     <form className="flex flex-col gap-4">
                         <input
                             type="text"
@@ -54,12 +55,20 @@ const AddTaskModal = React.memo(
                                 setDueDate(dayjs(e.target.value, 'YYYY-MM-DD'))
                             }
                         />
-                        <button
-                            className="rounded-md border bg-gray-200 p-2 hover:bg-gray-300"
-                            onClick={handleAddTask}
-                        >
-                            Cadastrar Tarefa
-                        </button>
+                        <div className="flex justify-around gap-4">
+                            <button
+                                className="rounded-md border bg-gray-200 p-2 hover:bg-gray-300"
+                                onClick={handleAddTask}
+                            >
+                                Cadastrar Tarefa
+                            </button>
+                            <button
+                                className="rounded-md border  p-2 bg-red-500 text-white hover:bg-red-600"
+                                onClick={closeModal}
+                            >
+                                Fechar
+                            </button>
+                        </div>
                     </form>
                 </div>
             </div>
