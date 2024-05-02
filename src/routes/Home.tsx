@@ -9,7 +9,24 @@ const Home = () => {
             </h1>
             <p className="text-2xl">Welcome to the Task Manager</p>
             <nav className="flex gap-4">
-                <Link to="/month">Month</Link>
+                <Link
+                    className="flex justify-center rounded-lg px-4 py-2 text-center font-bold underline hover:bg-secondary hover:text-white"
+                    to="/month"
+                >
+                    Month
+                </Link>
+                <Link
+                    to="/tasklist"
+                    className="flex justify-center rounded-lg px-4 py-2 text-center font-bold underline hover:bg-secondary hover:text-white"
+                >
+                    Task List
+                </Link>
+                <Link
+                    to="/searchtask"
+                    className="flex justify-center rounded-lg px-4 py-2 text-center font-bold underline hover:bg-secondary hover:text-white"
+                >
+                    Search Task
+                </Link>
             </nav>
         </div>
     );
