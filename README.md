@@ -1,30 +1,65 @@
-# React + TypeScript + Vite
+# task-front
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Este é o frontend da aplicação Task Manager, responsável por fornecer uma interface de usuário para criar, visualizar, atualizar e excluir tarefas.
 
-Currently, two official plugins are available:
+## Pré-requisitos
 
--   [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
--   [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Certifique-se de ter o Node.js instalado em sua máquina.
 
-## Expanding the ESLint configuration
+## Instalação
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+1. Clone este repositório:
 
--   Configure the top-level `parserOptions` property like this:
+    ```bash
+    git clone https://github.com/seu-usuario/task-front.git
+    ```
 
-```js
-export default {
-    // other rules...
-    parserOptions: {
-        ecmaVersion: 'latest',
-        sourceType: 'module',
-        project: ['./tsconfig.json', './tsconfig.node.json'],
-        tsconfigRootDir: __dirname,
-    },
-}
+2. Instale as dependências do projeto:
+    ```bash
+    cd task-front
+    yarn install
+    ```
+
+## Uso
+
+Para iniciar o servidor de desenvolvimento, execute o seguinte comando:
+
+```bash
+yarn dev
 ```
 
--   Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
--   Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
--   Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+Para construir a aplicação para produção, execute:
+
+```bash
+yarn build
+```
+
+Para verificar problemas de lint no código, execute:
+
+```bash
+yarn lint
+```
+
+Para visualizar a aplicação construída localmente, execute:
+
+```bash
+yarn preview
+```
+
+A aplicação estará disponível em http://localhost:3000 por padrão.
+
+## Tecnologias Utilizadas
+
+-   React.js: Uma biblioteca JavaScript para construção de interfaces de usuário.
+-   Vite: Um bundler e servidor de desenvolvimento para aplicativos web modernos.
+-   Axios: Um cliente HTTP baseado em promises para o navegador e Node.js.
+-   Day.js: Uma biblioteca JavaScript de manipulação de datas e horas leve e modular.
+-   React Router DOM: Uma biblioteca que fornece roteamento para aplicativos React.
+
+## Contribuindo
+
+Sinta-se à vontade para contribuir com este projeto. Abra uma issue para discutir as alterações propostas ou envie um pull request.
+
+## Licença
+
+Este projeto é privado e não está disponível para uso público.
