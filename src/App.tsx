@@ -13,7 +13,7 @@ function App() {
     return (
         <main className="h-screen">
             <BrowserRouter>
-                <Header handleGetData={handleGetData} />
+                <Header parseDate={handleGetData} />
                 <Routes>
                     <Route path="/" element={<Home />} />
                     <Route path="/month" element={<Month monthDate={date} />} />
